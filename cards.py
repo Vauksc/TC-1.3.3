@@ -65,10 +65,14 @@ class Card:
 
     @classmethod
     def deck_creation(cls):
+"""Creates a deck of 52 cards """
+
         deck = []
         for suit in cls.SUITS:
             for rank in cls.RANKS:
-                card = Card(suit, rank)
+                card = Card()
+                card.suit=suit
+                card.rank=rank
                 deck.append(card)
         return deck
 
